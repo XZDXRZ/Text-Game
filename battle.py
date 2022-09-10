@@ -43,10 +43,11 @@ def battle(player_object: player.Player,
         True: The player win the battle.
         False: The player lose the battle.
     """
-    while True: # Keep looping until one side win.
+    while player_object.hp >= 0 and enemies != []: # Keep looping until one side win.
         player_ad = player_object.ad
         player_speed  = player_object.speed
-        while True: # If player input invalid input, ask player input again.
+        player_enter_correct_input = False
+        while not player_enter_correct_input: # If player input invalid input, ask player input again.
             focus_aspect = input("Input which aspect the player wants to focus on: ")
             if focus_aspect == "1":
                 player_ad += player_ad * .4
@@ -65,8 +66,8 @@ def battle(player_object: player.Player,
             print(f"{next(enemy_number)}: {enemy.name}")
         
         target_number = None
-        while True: # the user shouldn't enter number which are out of range.
-            while True:
+        while not player_enter_correct_input: # the user shouldn't enter number which are out of range.
+            while not player_enter_correct_input:
                 target_number = input("Choose one from those enemies: ")
                 if target_number >= "0" and target_number <= "9":
                     break

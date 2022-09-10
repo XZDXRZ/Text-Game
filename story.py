@@ -17,7 +17,8 @@ def play_chapter0():
     print("|    Prologue    |")
     input("==================")
 
-    while True: # Player enter the name
+    player_enter_correct_input = False
+    while not player_enter_correct_input: # Player enter the name
         player_name = input("Please enter your name to start the game: ")
         if player_name != "":
             break
@@ -31,7 +32,7 @@ def play_chapter0():
     input("You look around and find yourself are sitting on the bed in an old wooden house.")
     input("There is some weapons on the table beside you, pick one to get armed.")
 
-    while True: # Player enter the 
+    while not player_enter_correct_input:
         weapon_player_chosen = input("Please enter 1 or 2.\n1 refers to sword and heavy armor. And 2 refers to bow and light armor: ")
         if weapon_player_chosen == "1":
             player_object.change_property(
@@ -61,7 +62,7 @@ def play_chapter0():
             enemies=[
                 slime.Slime()
             ]
-        )
+        ) # Whether the player win the game.
         if player_lose_the_battle:
             print("How could you lose? Anyway, you have gained another life, do it again.")
     
