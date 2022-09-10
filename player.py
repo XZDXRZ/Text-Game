@@ -17,11 +17,11 @@ class Player(organism.Organism):
         name: Player's name which the player entered in the beginning.
     """
     def __init__(self):
-        super().__init__(PLAYER_AD, PLAYER_SPEED, PLAYER_HP, None)
+        super().__init__(PLAYER_AD, PLAYER_SPEED, PLAYER_HP, "Player")
         self.ad = PLAYER_AD
         self.speed = PLAYER_SPEED
         self.hp = PLAYER_HP
-        self.name = None
+        self.name = "Player"
 
     def change_property(self,
                         ad: int,
