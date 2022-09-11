@@ -1,4 +1,4 @@
-"""This file describe the class Player which represents player.
+"""This file define the class Player which represents player.
 """
 
 import organism
@@ -38,3 +38,14 @@ class Player(organism.Organism):
         """Change the name of player.
         """
         self.name = name
+
+    def change_hp(self,
+                  hp: int):
+        """Change the HP value of player by the parameter input.
+        """
+        self.hp = hp
+
+    def get_name(self) -> str:
+        """Get the player's name.
+        """
+        return self.name

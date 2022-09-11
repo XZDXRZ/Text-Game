@@ -1,5 +1,7 @@
-"""This file describe the base class of all the living things in this game.
+"""This file define the base class of all the living things in this game.
 """
+
+from typing import Dict
 
 class Organism(object):
     """This is the base class of all the living things in this game.
@@ -19,3 +21,23 @@ class Organism(object):
         self.speed = speed
         self.hp = hp
         self.name = name
+
+    def get_property(self) -> Dict[str, int or str]:
+        """Get a organism's property: AD, Speed, HP, Name
+
+        Returns:
+            Dict: A dictionary contains all the properties of an organism.
+        """
+        properties = {
+            "ad" : self.ad,
+            "speed" : self.speed,
+            "hp" : self.hp,
+            "name" : self.name
+        }
+        return properties
+
+    def change_hp(self,
+                  hp: int):
+        """Change an object's HP.
+        """
+        self.hp = hp

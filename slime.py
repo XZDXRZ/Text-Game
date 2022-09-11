@@ -1,4 +1,4 @@
-"""This File describe the enemies, Slime in this game.
+"""This File define the enemies, Slime in this game.
 This file contains Slime, inherit from base class Enemy.
 """
 
@@ -9,7 +9,7 @@ SLIME_SPEED = 30
 SLIME_HP = 60
 
 class Slime(organism.Organism):
-   """This describe the enemy, Slime in this game.
+   """This define the enemy, Slime in this game.
 
    Attributes:
         ad: Attack Damage of the organism.

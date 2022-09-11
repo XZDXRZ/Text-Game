@@ -1,4 +1,4 @@
-"""This File describe functions for tutorial.
+"""This File define functions for tutorial.
 """
 
 def print_battle_help():
