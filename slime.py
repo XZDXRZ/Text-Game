@@ -4,7 +4,7 @@ This file contains Slime, inherit from base class Enemy.
 
 import organism
 
-SLIME_AD = 10
+SLIME_AD = 5
 SLIME_SPEED = 30
 SLIME_HP = 60
 

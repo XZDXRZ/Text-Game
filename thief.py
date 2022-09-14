@@ -3,7 +3,7 @@
 
 import organism
 
-THIEF_AD = 30
+THIEF_AD = 10
 THIEF_SPEED = 35
 THIEF_HP = 80
 

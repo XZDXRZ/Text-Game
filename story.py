@@ -24,7 +24,7 @@ def play_chapter0():
         if player_name != "":
             break
         else:
-            print("Please enter something.")
+            input("Please enter something.")
     player_object.change_name(player_name)
 
     input(player_object.get_name() + " wake up from bed and heading towards school, but a truck hits him.")
@@ -51,10 +51,10 @@ def play_chapter0():
             )
             break
         else:
-            print("Invalid input, please enter 1 or 2.")
+            input("Invalid input, please enter 1 or 2.")
     
     input("As you open up the door, a slime appears.")
-    print("Battle starts, the enemy is a Slime.")
+    input("Battle starts, the enemy is a Slime.")
 
     print_help_doc.print_battle_help() # This is the first battle, so print the tutorial.
     player_lose_the_battle = True
@@ -66,10 +66,10 @@ def play_chapter0():
             ]
         ) # Whether the player win the game.
         if player_lose_the_battle:
-            print("How could you lose? Anyway, you have gained another life, do it again.")
+            input("How could you lose? Anyway, you have gained another life, do it again.")
     
-    print("You find youself are in a village which is attacking by slimes. You can see the village chief is walking towards you.")
-    print("From the words of the village chief, you get to know that the village is attacked frequently recently, and he wants you to investigate the reason.")
+    input("You find youself are in a village which is attacking by slimes. You can see the village chief is walking towards you.")
+    input("From the words of the village chief, you get to know that the village is attacked frequently recently, and he wants you to investigate the reason.")
     input("You accept the commission and start on your journey.")
 
     print("===================")
@@ -86,7 +86,7 @@ def play_chapter1():
 
     input("You are walking around the village, you found some slime are heading towards the village. You decide to wipe out them.")
 
-    print(f"Battle between {player_object.get_name()} and three slimes starts!")
+    input(f"Battle between {player_object.get_name()} and three slimes starts!")
     player_lose_the_battle = True
     while player_lose_the_battle:
         player_lose_the_battle = not battle.battle(
@@ -98,12 +98,12 @@ def play_chapter1():
             ]
         )
         if player_lose_the_battle:
-            print("How could you lose? Anyway, you have gained another life, do it again.")
+            input("How could you lose? Anyway, you have gained another life, do it again.")
 
-    print("After the battle, you find a piece of paper on the ground. That's a map to an unknow place.")
+    input("After the battle, you find a piece of paper on the ground. That's a map to an unknow place.")
     input("As you focusing on the map, a strange man appears from  the grass. Suddenly, he attacked you!")
 
-    print(f"Battle between {player_object.get_name()} and a strange man starts!")
+    input(f"Battle between {player_object.get_name()} and a strange man starts!")
     player_lose_the_battle = True
     while player_lose_the_battle:
         player_lose_the_battle = not battle.battle(
@@ -113,15 +113,15 @@ def play_chapter1():
             ]
         )
         if player_lose_the_battle:
-            print("How could you lose? Anyway, you have gained another life, do it again.")
+            input("How could you lose? Anyway, you have gained another life, do it again.")
     
-    print("You realized that the map is not as safe as you thought.")
-    print("You follow the direction of the map and come to a cave.")
-    print("You find two strange men and some slimes in the cave.")
-    print("The two men are discussing something. You hear from them that they are training the slimes to attack the village due to some reasons.")
+    input("You realized that the map is not as safe as you thought.")
+    input("You follow the direction of the map and come to a cave.")
+    input("You find two strange men and some slimes in the cave.")
+    input("The two men are discussing something. You hear from them that they are training the slimes to attack the village due to some reasons.")
     input("You are angry about this, and decide to give them a lesson.")
 
-    print("Battle starts, the enemies are 2 strange men and 4 slimes.")
+    input("Battle starts, the enemies are 2 strange men and 1 slime.")
     player_lose_the_battle = True
     while player_lose_the_battle:
         player_lose_the_battle = not battle.battle(
@@ -130,14 +130,35 @@ def play_chapter1():
                 thief.Thief(),
                 thief.Thief(),
                 slime.Slime(),
+            ]
+        )
+        if player_lose_the_battle:
+            input("Don't be sad, do it again.")
+    
+    input("As you finishing battle, some other slimes realize you are here and start attacking you.")
+    
+    input("Battle starts, the enemies are 3 slimes.")
+    player_lose_the_battle = True
+    while player_lose_the_battle:
+        player_lose_the_battle = not battle.battle(
+            player_object=player_object,
+            enemies = [
                 slime.Slime(),
                 slime.Slime(),
                 slime.Slime(),
             ]
         )
         if player_lose_the_battle:
-            print("How could you lose? Anyway, you have gained another life, do it again.")
-     # TODO : Player cannot win
+            input("How could you lose? Anyway, you have gained another life, do it again.")
+    
+    input("You find their plan on a table.")
+    input("They are being leaded by a organization which is hostile to this country.")
+    input("You know, your journey is still long...")
+    input("To be continued...")
+
+    print("====================")
+    print("| End of Chapter 1 |")
+    input("====================")
 
 if __name__ == "__main__":
     play_chapter1() # Debug
