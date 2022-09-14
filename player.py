@@ -39,12 +39,6 @@ class Player(organism.Organism):
         """
         self.name = name
 
-    def change_hp(self,
-                  hp: int):
-        """Change the HP value of player by the parameter input.
-        """
-        self.hp = hp
-
     def get_name(self) -> str:
         """Get the player's name.
         """
